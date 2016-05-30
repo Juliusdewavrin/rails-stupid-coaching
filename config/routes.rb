@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  get 'answer', to: 'coaching#answer'
+  # redirige l'url /answer vers le CoachingController
+  get 'ask', to: 'coaching#ask'
+  # redirige l'url /ask vers le CoachingController
+  root to: 'coaching#ask'
+  # You can have the root of your site routed with "root"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
